@@ -1,0 +1,18 @@
+{
+  "name": "nisd-trello-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dashboard local para exportacao do quadro NISD do Trello",
+  "main": "server.js",
+  "scripts": {
+    "build": "esbuild src/intro.tsx --bundle --minify --format=iife --platform=browser --target=es2020 --outfile=public/intro.bundle.js",
+    "prestart": "npm run build",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "esbuild": "^0.28.2",
+    "express": "^5.1.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}
