@@ -14,13 +14,12 @@ Abra `http://localhost:3000`.
 
 ## Publicar no Vercel
 
-Conecte este projeto a um repositorio GitHub privado no Vercel. O site publicado
-sera publico, mas o repositorio e a exportacao original do Trello permanecerao
-privados. O endpoint do dashboard disponibiliza os dados exibidos no site para
-qualquer pessoa que o acessar.
+Este repositorio e publico. O arquivo `trello.json.json` e o endpoint `/api/dados`
+tambem ficam acessiveis publicamente; nao inclua dados que devam permanecer
+restritos.
 
-O Vercel executa `npm run build` e publica a pasta `public`. A funcao em `api/`
-serve `/api/dados` usando a exportacao `trello.json.json`.
+O Vercel publica a pasta `public`, configurada em `vercel.json`. A funcao em
+`api/` serve `/api/dados` usando a exportacao `trello.json.json`.
 
 Para atualizar os dados publicados, substitua `trello.json.json`, envie a
 alteracao para o GitHub e aguarde o Vercel concluir uma nova implantacao. A
